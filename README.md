@@ -32,3 +32,10 @@ Select the hard drive to want to install windows to and follow the prompts.
 You'll still have to activate windows for full functionality, but how you do that I will leave to your discretion.
 
 Visit https://ninite.com/ for an all in one app installer for new pc setups!
+
+## ☕ Support the Project
+
+If you find this guide helpful and want to support further development by Fulllion Creative Works, consider leaving a tip!
+
+* [Donate via PayPal](https://www.paypal.com/donate/?hosted_button_id=LCDZX75HR4CLC)
+* [Support on Ko-fi](https://ko-fi.com/fulllion)
