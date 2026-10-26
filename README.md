@@ -1,3 +1,9 @@
+![Windows 10 | 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows&logoColor=white)
+![Tools: Rufus, balenaEtcher, Media Creation Tool](https://img.shields.io/badge/Tools-Rufus%20%7C%20balenaEtcher%20%7C%20Media%20Creation%20Tool-5c2d91)
+![Needs an 8 GB or larger USB drive](https://img.shields.io/badge/Needs-8%20GB%2B%20USB%20drive-6f42c1)
+[![Last updated](https://img.shields.io/github/last-commit/ImmuneMoon/Windows-Install-Guide?label=updated)](https://github.com/ImmuneMoon/Windows-Install-Guide/commits/main)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](LICENSE)
+
 If you want a fresh install, and want to keep your files, you'll need another drive or somewhere to copy the files you want to keep over to. 
 It may also be handy to backup your whole hard drive as a restore image just in case you want or need it, but just copying important files to another drive is good enough.
 
