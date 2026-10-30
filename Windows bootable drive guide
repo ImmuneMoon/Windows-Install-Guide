@@ -1,34 +1,156 @@
-If you want a fresh install, and want to keep your files, you'll need another drive or somewhere to copy the files you want to keep over to. 
+If you want a fresh install, and want to keep your files, you'll need another drive or somewhere to copy the files you want to keep over to.
 It may also be handy to backup your whole hard drive as a restore image just in case you want or need it, but just copying important files to another drive is good enough.
 
-After copying the files you want to keep, go to (https://www.microsoft.com/en-us/software-download/windows10ISO) and get an ISO of windows 10. 
-If you want 11, or whatever else, look for it in (https://www.microsoft.com/en-us/software-download/) 
-[Tip: use a mac, or phone to download the iso if you don't want to use the windows creation tool] 
-You'll want to get a flash drive thats at least 8gb then:
+Moving to a new drive and keeping your files on the old one? Use my old install removal guide (https://github.com/ImmuneMoon/Remove-Old-Windows-Install-Keep-Your-Files) along with this one.
 
-If using the media creation tool, continue the guide here: https://www.youtube.com/watch?v=R7VLs8FwD2M
+Installing Linux instead? Use my Linux install guide (https://github.com/ImmuneMoon/Linux-Install-Guide).
 
-Otherwise, if you don't want to use the creation tool, continue here:
+Support dates were checked in October 2026.
 
-Use something like:
-Rufus: https://rufus.ie/en/
 
-Rufus bootable flash drive guide:
-https://softwarekeep.com/help-center/how-to-create-a-bootable-usb-using-rufus
+WINDOWS 10 OR WINDOWS 11?
+Start here, since it decides which version you download. Windows 11 is the one Microsoft still fully supports, but not every PC can run it.
 
-or
 
-balenaEtcher: https://www.balena.io/etcher/
+CHECK YOUR PC WITH PC HEALTH CHECK
+Do this on the PC you're installing to, while it still has Windows on it.
 
-balenaEtcher bootable flash drive guide:
+1. Download Microsoft's PC Health Check app (https://aka.ms/GetPCHealthCheckApp).
+2. Open the file, accept the terms, and click Install.
+3. Open the app, and under Introducing Windows 11, click Check now.
+4. It tells you if the PC meets the requirements, and if it doesn't, what's missing. Click See all results for the full list.
 
-https://www.how2shout.com/how-to/balenaetcher-how-to-create-a-bootable-usb-flash-drive-using-etcher.html
-to format the flash drive to FAT32 and make a bootable drive.
+Can't run it? Compare your PC with Microsoft's requirements (https://support.microsoft.com/en-us/windows/experience/compatibility/windows-11-system-requirements). The main ones are a supported 64-bit CPU, 4 GB of RAM, 64 GB of storage, UEFI with Secure Boot, and TPM 2.0.
 
-After that, plug in your usb drive if not already done, go into your BIOS and format your desired hard drive if it's not already formatted, 
-set your BIOS to launch from the usb drive by placing it at the top of the boot order priority list, then load up. If everything goes right you should be able to install windows from your bootable usb drive. 
-Select the hard drive to want to install windows to and follow the prompts.
+Failed on TPM or Secure Boot? They may just be turned off. Look for TPM, fTPM, Intel PTT, or Secure Boot in your BIOS (see Getting Into Your BIOS), turn them on, and check again.
 
-You'll still have to activate windows for full functionality, but how you do that I will leave to your discretion.
 
-Visit https://ninite.com/ for an all in one app installer for new pc setups!
+IF YOUR PC QUALIFIES
+Go with Windows 11. It's a free upgrade for a Windows 10 PC that qualifies, and a PC that's already activated should normally activate Windows 11 by itself once it's online, as long as you install the same edition (Home or Pro). You won't need my Windows 10 guide.
+
+If you'd rather keep your apps and files in place than do a fresh install, use the Windows 11 Installation Assistant on Microsoft's download page (https://www.microsoft.com/en-us/software-download/windows11) instead of this guide.
+
+
+IF YOUR PC DOESN'T QUALIFY
+You've got three real options:
+
+- Stay on Windows 10: It's official, and Extended Security Updates run through October 12, 2027. They can be free. It's a stopgap, so you'll need a new plan before that date. See my Windows 10 community support guide (https://github.com/ImmuneMoon/Windows-10-Community-Support-Guide).
+- Switch to Linux: It's free, it's well supported, and it runs well on older PCs. You can try it from a USB drive first. Some Windows apps won't run on it. See my Linux install guide (https://github.com/ImmuneMoon/Linux-Install-Guide).
+- Force Windows 11 with Rufus: You get Windows 11 on hardware it wouldn't normally install on. Microsoft warns (https://support.microsoft.com/windows/0b2dc4a2-5933-4ad4-9c09-ef0a331518f1) these PCs may malfunction and aren't guaranteed updates, including security updates.
+
+If you're staying on Windows 10, read my Windows 10 guide before you install.
+
+
+WHAT YOU'LL NEED
+- A flash drive that's at least 8gb. Making the drive erases everything on it, so copy anything you want off it first.
+- A working Windows PC to make the drive with. Both the Media Creation Tool and Rufus only run on Windows.
+- Your Windows license. A PC that's already been activated usually has this covered (see Activating Windows).
+
+Then pick one way to make the drive. The Media Creation Tool is the easiest. Use Rufus if you already have an ISO or need its extra options.
+
+
+USING THE MEDIA CREATION TOOL
+This is Microsoft's own tool. It downloads Windows and makes the flash drive for you, so you don't need to get an ISO first.
+
+
+BUILD THE DRIVE
+1. Go to Microsoft's download page for Windows 11 (https://www.microsoft.com/en-us/software-download/windows11) or Windows 10 (https://www.microsoft.com/en-us/software-download/windows10).
+2. Under Create Windows 11 Installation Media or Create Windows 10 installation media, click Download Now.
+3. Plug in your flash drive.
+4. Open the downloaded file and click Yes if Windows asks for permission.
+5. Wait for Getting a few things ready to finish, then click Accept on the license terms.
+6. If it asks What do you want to do?, choose Create installation media for another PC and click Next.
+7. Check the language, edition, and architecture. They come from the PC you're on, so if you're making the drive for a different PC, uncheck Use the recommended options for this PC and change them. Click Next.
+8. Choose USB flash drive and click Next.
+9. Pick your flash drive and click Next. Check the size, since this is the drive that gets erased.
+10. Wait while it downloads Windows and builds the drive. This can take a while, and you can keep using the PC.
+11. When it says Your USB flash drive is ready, click Finish.
+
+Your drive is ready, so go to Getting Into Your BIOS.
+
+
+IF SOMETHING GOES WRONG
+- Your flash drive isn't listed: Plug it into another USB port and click Refresh drive list.
+- The tool fails partway through: Restart the PC and run it again. If it keeps failing, try another flash drive, or use Rufus.
+
+
+GETTING AN ISO
+You only need this for Rufus. Since Rufus only runs on Windows, the ISO has to end up on a Windows PC.
+
+Windows 11: On Microsoft's download page (https://www.microsoft.com/en-us/software-download/windows11), go to Download Windows 11 Disk Image (ISO) for x64 devices, choose the download, click Confirm, choose your language, click Confirm, then click the download button. This works from any device.
+
+Windows 10: Microsoft doesn't show the ISO to Windows browsers. If you open the ISO page (https://www.microsoft.com/en-us/software-download/windows10ISO) on Windows, it sends you to the Media Creation Tool instead. You've got two ways around that:
+
+- Use the Media Creation Tool. Follow its steps, but choose ISO file instead of USB flash drive.
+- Download it from another device. [Tip: use a mac, or phone to download the iso if you don't want to use the windows creation tool] The same ISO page offers the direct download there. A Mac is easier, since a phone needs several GB of free space and you'd still have to move the file to a Windows PC.
+
+Microsoft's ISO download links only last 24 hours, so finish the download the same day.
+
+
+USING RUFUS
+1. Download Rufus from https://rufus.ie/en/ and open it. There's nothing to install. Click Yes if Windows asks for permission.
+2. Plug in your flash drive and pick it under Device. Check the name and size, since this is the drive that gets erased.
+3. Under Boot selection, choose Disk or ISO image, click SELECT, and open your Windows ISO.
+4. Under Image option, choose Standard Windows Installation.
+5. Set the partition settings for your PC:
+   - Most PCs: set Partition scheme to GPT and Target system to UEFI (non CSM).
+   - Older PCs without UEFI: set Partition scheme to MBR and Target system to BIOS (or UEFI-CSM). This works for Windows 10. It won't work for Windows 11 on its normal requirements.
+6. Leave the rest as it is. Rufus picks the file system itself, and it's usually NTFS, because Windows ISOs have files too big for FAT32.
+7. Click START.
+8. A Windows User Experience box may pop up with extra options. You can click OK without checking anything.
+   - Remove requirement for an online Microsoft account is handy if you want a local account on Windows 11. Microsoft keeps closing these workarounds, so it may still ask for internet (see my local user guide (https://github.com/ImmuneMoon/Enable-a-local-user-in-Windows11-no-microsoft-account-)).
+   - Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0 lets Windows 11 install on PCs that don't qualify. Read If Your PC Doesn't Qualify first.
+9. Click OK on the warning that everything on the drive will be destroyed.
+10. Wait until the bar at the bottom says READY, then click CLOSE.
+
+If your PC won't boot the drive because of Secure Boot, check the Secure Boot settings in your BIOS. Newer versions of Rufus normally don't need it turned off, but some PCs need an option like 3rd party UEFI CA turned on.
+
+
+GETTING INTO YOUR BIOS
+1. Restart the PC and tap the BIOS key as soon as the screen lights up. It's usually Delete or F2, and sometimes F10 or Esc. The right key usually shows on screen for a moment.
+2. Find the Boot section, which may be called Boot Order or Boot Priority. Some BIOS screens hide this behind an Advanced Mode button.
+3. Move your USB drive to the top of the list. If it's listed twice, pick the one that starts with UEFI.
+4. Choose Save & Exit, which is usually F10.
+
+Shortcut: Most PCs have a one-time boot menu, so you can skip all of this. Tap F12, F11, F8, or Esc as the PC starts, and pick your USB drive from the list.
+
+
+INSTALLING WINDOWS
+This erases the drive you install to, so make sure your files are copied off first. If you're moving to a new drive and keeping files on the old one, unplug the old drive before you start.
+
+1. Plug in your USB drive and start the PC from it. If you see Press any key, press one.
+2. Choose your language and keyboard, then click Next.
+3. Start the install:
+   - Windows 11: choose Install Windows 11, check the box agreeing that everything will be deleted, and click Next.
+   - Windows 10: click Install now.
+4. When it asks for a product key, click I don't have a product key if the PC was already activated. Otherwise, enter your key.
+5. If it asks for an edition, choose the one your license covers, usually Home or Pro. Picking the wrong one means Windows won't activate.
+6. Accept the license terms.
+7. On Windows 10, choose Custom: Install Windows only (advanced).
+8. Pick the drive to install to:
+   - To wipe it, select each partition on that drive and click Delete until it shows as Unallocated Space. Use the sizes to make sure you've got the right drive.
+   - Select the Unallocated Space and click Next. On Windows 11, then click Install.
+9. The PC will restart a few times. Remove the USB drive when Windows starts setting up.
+10. Follow the setup prompts for your region, keyboard, and account.
+
+Windows 11 setup: Microsoft says Home and Pro for personal use need internet and a Microsoft account during setup, so have your Wi-Fi password ready. Windows 10 can still use a local account, usually by setting it up with the internet unplugged.
+
+
+ACTIVATING WINDOWS
+Go to Settings and search for Activation to see where you stand.
+
+- Same PC, same edition: It should activate by itself once it's online. This works for Windows 11 on a Windows 10 PC that qualifies.
+- Says it isn't activated: Connect to the internet and give it a little while. If it still doesn't activate, open the Activation page and click Troubleshoot, or enter your product key there.
+- New PC or new motherboard: You'll usually need your own product key. A big hardware change can stop an old license from activating by itself.
+
+
+INSTALLING YOUR APPS WITH NINITE
+Ninite is an all in one app installer for new pc setups!
+
+1. On your new install, go to https://ninite.com/.
+2. Check off the apps you want, like your browser, media player, and anything else on the list.
+3. Click Get Your Ninite to download your custom installer.
+4. Open the file and click Yes if Windows asks for permission.
+5. Let it finish. It installs everything for you, then you can close it.
+
+Keep that file. Running it again later updates the same apps.
