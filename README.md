@@ -1,3 +1,5 @@
+# Windows Install Guide
+
 ![Windows 10 | 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows&logoColor=white)
 ![Tools: Rufus, Media Creation Tool](https://img.shields.io/badge/Tools-Rufus%20%7C%20Media%20Creation%20Tool-5c2d91)
 ![Needs an 8 GB or larger USB drive](https://img.shields.io/badge/Needs-8%20GB%2B%20USB%20drive-6f42c1)
