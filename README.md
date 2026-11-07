@@ -15,6 +15,8 @@ Moving to a new drive and keeping your files on the old one? Use my [old install
 
 Installing Linux instead? Use my [Linux install guide](https://github.com/ImmuneMoon/Linux-Install-Guide).
 
+Learning IT support? Installing Windows is good hands-on practice for CompTIA A+. See my [IT Support Careers and Certifications guide](https://github.com/ImmuneMoon/IT-Support-Careers-and-Certifications#112-practice-with-this-sites-guides).
+
 *Support dates were checked in October 2026.*
 
 ## Windows 10 or Windows 11?
