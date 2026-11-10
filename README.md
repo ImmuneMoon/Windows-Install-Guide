@@ -144,7 +144,7 @@ Go to **Settings** and search for **Activation** to see where you stand.
 
 * **Same PC, same edition:** It should activate by itself once it's online. This works for Windows 11 on a Windows 10 PC that qualifies.
 * **Says it isn't activated:** Connect to the internet and give it a little while. If it still doesn't activate, open the **Activation** page and click **Troubleshoot**, or enter your product key there.
-* **New PC or new motherboard:** You'll usually need your own product key. A big hardware change can stop an old license from activating by itself.
+* **New PC or new motherboard:** A big hardware change can stop a license from activating by itself. A retail license linked to your Microsoft account can usually be moved with **Troubleshoot** > **I changed hardware on this device recently**. A license that came with a prebuilt PC stays with that PC, so you'll need your own key. See [Move Windows to a New PC](https://github.com/ImmuneMoon/Move-Windows-to-a-New-PC#5-reactivate-windows) for how to check your license type and reactivate.
 
 ## Installing Your Apps With Ninite
 Ninite is an all in one app installer for new pc setups!
