@@ -17,8 +17,6 @@ Installing Linux instead? Use my [Linux install guide](https://github.com/Immune
 
 Learning IT support? Installing Windows is good hands-on practice for CompTIA A+. See my [IT Support Careers and Certifications guide](https://github.com/ImmuneMoon/IT-Support-Careers-and-Certifications#112-practice-with-this-sites-guides).
 
-*Support dates were checked in October 2026.*
-
 ## Windows 10 or Windows 11?
 Start here, since it decides which version you download. Windows 11 is the one Microsoft still fully supports, but not every PC can run it.
 
